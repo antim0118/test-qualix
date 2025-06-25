@@ -7,7 +7,7 @@ import { Center } from "@chakra-ui/react";
 function App() {
     return (
         <Center>
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Routes>
                     <Route path="/" element={<Navigate to="/requests" />} />
                     <Route path="/requests" element={<RequestsPage />} />
